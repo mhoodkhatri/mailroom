@@ -12,6 +12,15 @@ def count_emails(text: str) -> int:
     lines = text.split("\n")
     return len(lines) - 1
 
+
+def count_in_group(text: str, group: str) -> int:
+    count = 0
+    for line in text.split("\n"):
+        parts = line.split(",")
+        if parts[3] == group:
+            count = count + 1
+    return count
+
 text = read_subscribers("data/subscribers.csv")
 
 assert isinstance(text, str)
