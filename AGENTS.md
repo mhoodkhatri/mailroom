@@ -29,6 +29,7 @@ I have finished lessons **13.1 to 13.7**. Use only these concepts:
 | 13.5 Two conditions, empty values, while | `and`, `or`, `not`; truthy and falsy values (`""`, `None`, `0`); the `x = x or default` fallback and its 0 trap; `while` loops that update their condition |
 | 13.6 Functions | `def`, parameters, arguments, return values, type hints on every signature, pure functions, `assert` as a simple test |
 | 13.7 Lists and dictionaries | `list[...]`, `dict[str, ...]`, `len()`, key lookup, `KeyError`, `IndexError`, `.get(key, default)`, records as dicts, `sorted()` with `key=` and `reverse=True`, `lambda` used only as a sort key |
+| Extra (taught early) | `isinstance(value, type)` returns `True` / `False`; `assert` tests written before the code (preview of 13.11) |
 
 **Not covered yet:** reading files (13.8), dates (13.9), reading errors in
 depth (13.10), test-first / TDG loop and pytest (13.11), classes and objects,
