@@ -1,0 +1,18 @@
+[project]
+name = "mailroom"
+version = "0.1.0"
+description = "A learning project: building a mailroom program while studying programming fundamentals (Agent Factory, Chapter 13)."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+pythonVersion = "3.14"
+include = ["."]
+exclude = [".venv"]
