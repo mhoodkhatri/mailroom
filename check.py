@@ -7,6 +7,11 @@ def read_subscribers(path: str) -> str:
         text = file.read()
     return text
 
+
+def count_emails(text: str) -> int:
+    lines = text.split("\n")
+    return len(lines) - 1
+
 text = read_subscribers("data/subscribers.csv")
 
 assert isinstance(text, str)
