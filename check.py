@@ -1,25 +1,5 @@
-# check.py: tests for reading data/subscribers.csv
-# The tests are written BEFORE the code. The functions do not exist yet.
-
-
-def read_subscribers(path: str) -> str:
-    with open(path, encoding="utf-8") as file:
-        text = file.read()
-    return text
-
-
-def count_emails(text: str) -> int:
-    lines = text.split("\n")
-    return len(lines) - 1
-
-
-def count_in_group(text: str, group: str) -> int:
-    count = 0
-    for line in text.split("\n"):
-        parts = line.split(",")
-        if parts[3] == group:
-            count = count + 1
-    return count
+# check.py: tests for the functions in mailroom.py
+from mailroom import read_subscribers, count_emails, count_in_group
 
 text = read_subscribers("data/subscribers.csv")
 
@@ -29,5 +9,9 @@ assert count_emails(text) == 24
 assert count_in_group(text, "daily-drinkers") == 8
 assert count_in_group(text, "tea-curious") == 8
 assert count_in_group(text, "gift-buyers") == 8
+
+# count_emails must give the same answer with or without a newline at the end
+assert count_emails("header\nAyesha\nTom") == 2
+assert count_emails("header\nAyesha\nTom\n") == 2
 
 print("All checks passed")
