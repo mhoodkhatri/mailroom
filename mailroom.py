@@ -10,8 +10,11 @@ def read_subscribers(path: str) -> str:
 
 
 def count_emails(text: str) -> int:
-    lines = text.split("\n")
-    return len(lines) - 1
+    count = 0
+    for line in text.splitlines():
+        if line.strip():
+            count = count + 1
+    return count - 1
 
 
 def count_in_group(text: str, group: str) -> int:
