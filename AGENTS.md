@@ -29,6 +29,10 @@ I have finished lessons **13.1 to 13.7**. Use only these concepts:
 | 13.5 Two conditions, empty values, while | `and`, `or`, `not`; truthy and falsy values (`""`, `None`, `0`); the `x = x or default` fallback and its 0 trap; `while` loops that update their condition |
 | 13.6 Functions | `def`, parameters, arguments, return values, type hints on every signature, pure functions, `assert` as a simple test |
 | 13.7 Lists and dictionaries | `list[...]`, `dict[str, ...]`, `len()`, key lookup, `KeyError`, `IndexError`, `.get(key, default)`, records as dicts, `sorted()` with `key=` and `reverse=True`, `lambda` used only as a sort key |
+| Extra (taught early) | `isinstance(value, type)` returns `True` / `False`; `assert` tests written before the code (preview of 13.11) |
+| Extra (taught early, from 13.8) | `with open(path, encoding="utf-8") as file:`, `for line in file:`, `file.read()`; `\n` is one newline character; `.strip()` (removes whitespace from both ends only; `"   ".strip()` is `""`, which is falsy); `.split(",")` (empty piece `''` at a cut at the start or end); `.splitlines()` (no empty piece at the end, handles `\r\n`); string slicing `text[0:10]` |
+| Extra (taught early) | `import sys`; `sys.argv` is a list of strings: `[0]` is the file name, `[1]` is the first word typed after it; check `len(sys.argv)` before reading `sys.argv[1]` (else `IndexError`) |
+| Extra (taught early) | importing your own file: `from tools import double` (file name without `.py`; import runs the whole file); the guard `if __name__ == "__main__":` (code under it runs only when you run that file yourself, not when it is imported) |
 
 **Not covered yet:** reading files (13.8), dates (13.9), reading errors in
 depth (13.10), test-first / TDG loop and pytest (13.11), classes and objects,
